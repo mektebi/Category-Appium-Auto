@@ -2,6 +2,7 @@ package com.category.test.tests;
 
 import com.category.test.helper.AppiumController;
 import com.category.test.pages.EvBakimPage;
+import com.category.test.pages.ShoppingCartPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,9 +34,17 @@ public class TestCategoryWorkflow extends BaseTestClass {
 
 		evBakimPage.gotoShoppingCart();
 
-		evBakimPage.deleteDeterjan();
+		shoppingCartPage.checkTotalPrice("25.0 TL");
 
-		evBakimPage.deleteKrem();
+		shoppingCartPage.deleteDeterjan();
+
+		shoppingCartPage.checkTotalPrice("15.0 TL");
+
+		shoppingCartPage.deleteKrem();
+
+		shoppingCartPage.checkTotalPrice("0.0 TL");
+
+		shoppingCartPage.checkEmptyCart();
 
 
 	}

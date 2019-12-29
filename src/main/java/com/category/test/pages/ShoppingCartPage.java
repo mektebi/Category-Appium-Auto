@@ -9,4 +9,5 @@ public interface ShoppingCartPage {
 
 	public void checkTotalPrice(String total);
 
+	public void checkEmptyCart();
 }

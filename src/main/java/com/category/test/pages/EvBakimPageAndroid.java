@@ -9,6 +9,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 
 public class EvBakimPageAndroid extends AppiumHelper implements EvBakimPage {
@@ -21,12 +22,6 @@ public class EvBakimPageAndroid extends AppiumHelper implements EvBakimPage {
 
 	@FindBy(xpath = "//android.widget.TextView[@content-desc=\"Shopping Cart\"]\n")
 	public MobileElement shoppingCartBtn;
-
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.ImageView")
-	public MobileElement DeterjanDeleteBtn;
-
-	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.ImageView")
-	public MobileElement KremDeleteBtn;
 
 
 	public EvBakimPageAndroid(AppiumDriver driver) {
@@ -55,20 +50,5 @@ public class EvBakimPageAndroid extends AppiumHelper implements EvBakimPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.getir.getirtestingcasestudy:id/total_price")));
 
 	}
-
-	@Override
-	public void deleteDeterjan() {
-
-		clickElement(DeterjanDeleteBtn);
-
-	}
-
-	@Override
-	public void deleteKrem() {
-
-		clickElement(KremDeleteBtn);
-
-	}
-
 
 }

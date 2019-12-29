@@ -8,8 +8,4 @@ public interface EvBakimPage {
 
 	public void gotoShoppingCart();
 
-	public void deleteDeterjan();
-
-	public void deleteKrem();
-
 }

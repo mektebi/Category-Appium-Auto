@@ -13,7 +13,7 @@ public class BaseTestClass extends AppiumBaseClass {
 	protected EvBakimPage evBakimPage;
 	protected KisiselBakimPage kisiselBakimPage;
 	protected CategoryPage categoryPage;
-	protected ShoppingCartPage shoppingCartPagePage;
+	protected ShoppingCartPage shoppingCartPage;
 
 	@BeforeSuite
 	public void setUp() throws Exception {
@@ -25,6 +25,7 @@ public class BaseTestClass extends AppiumBaseClass {
 			evBakimPage = new EvBakimPageAndroid(driver());
 			kisiselBakimPage = new kisiselbakimPageAndroid(driver());
 			categoryPage = new CategoryPageAndroid(driver());
+			shoppingCartPage = new ShoppingCartPageAndroid(driver());
 			break;
 
 		}
